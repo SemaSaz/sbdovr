@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="colorform" > Добавление курса</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.type_of_cours.label }}<br>
+        {{ form.type_of_cours(class="form-control") }}<br>
+        {% for error in form.type_of_cours.errors %}
+    <p class="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.price.label }}<br>
+        {{ form.price(class="form-control") }}<br>
+        {% for error in form.price.errors %}
+    <p content="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="enter", style="background-color:#B18FCF") }}</p>
+    {{message}}
+</form>
+<link rel="stylesheet" href="static/css/main.css">
+{% endblock %}

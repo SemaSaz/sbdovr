@@ -1,0 +1,25 @@
+{% extends 'ProjectBase.html' %}
+{% block title %}
+Личный кабинет
+{% endblock %}
+{% block bodyInf %}
+<div class="container">
+    <h1>Личный кабинет</h1>
+    <form method=post enctype=multipart/form-data>
+          <input type=file name=file>
+          <input type=submit value=Upload>
+        </form>
+
+ {% if filename %}
+    <h1>Ава</h1>
+    <p><img src="/static/img/{{filename}}"  width="300" height="200"></p>
+{% else %}
+<div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+        <image x="0" y="0" width="500" height="500  " xlink:href="https://ndc.book24.ru/resize/820x1180/iblock/6fc/6fc9404ae24199092e8d141f06d80c68/ce20bd32796f60af8a2825b22d381c69.jpg" />
+        </svg>
+      </div>
+{% endif %}
+</div>
+
+{% endblock %}

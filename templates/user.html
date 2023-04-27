@@ -1,0 +1,13 @@
+{% extends 'ProjectBase.html' %}
+{% block title %}
+Главная
+{% endblock %}
+{% block bodyInf %}
+<h1>User: {{user.nickname}}!</h1>
+<hr>
+{% for post in posts %}
+<p>
+  {{post.author.nickname}} says: <b>{{post.body}}</b>
+</p>
+{% endfor %}
+{% endblock %}
